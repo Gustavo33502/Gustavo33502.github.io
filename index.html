@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+       }
+       .wrapper{
+        min-height: 100vh;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 15px;
+        font-size: 20px;
+        font-family: sans-serif;
+       }
+       .img{
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+       }
+       .img1{
+        
+        overflow: hidden;
+        object-fit: cover;
+        max-height: 100%;
+        max-width: 100%;
+       }
+       .header{
+        overflow: hidden;
+        max-height:fit-content ;
+        background-color: blue;
+        max-height:150px ;
+       }
+       .footer{
+        color: white;
+        background-color: black;
+       }
+       .header, .footer, .content1, .content2>div>div{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 5px solid #000;
+       }
+       .main-container{
+        flex: 6;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 15px;
+       }
+       .content2{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 15px;
+       }
+       .content2>div{
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 15px;
+       }
+       @media  screen and (max-width: 800px) {
+        .main-container>div{
+            min-height: 400px;
+        }
+        .content1{
+            flex: 100%;
+              background-image: url("b2.png");
+        }
+        .header{
+            max-height: 200px;
+            min-height: 90px;
+            background-color: blue;
+          
+        }
+        .footer{
+            min-height: 110px;
+            background-color: red;
+        }
+       }
+       @media screen and (max-width: 520px) {
+        .content2>div{
+            flex-direction: column;
+        }
+        .content2>div>div{
+            min-height: 200px;
+        }
+       }
+    </style>
+</head>
+<body>
+    
+    <div class="wrapper">
+    <div class="header"><img src="head.jpg" class="img1"></src></div>
+    <div class="main-container">
+    <div class="content1"><img src="elden.jpg" class="img"></src></div>
+    
+    <div class="content2"> 
+        <div class="subcontent1">
+            <div><img src="lobo.jpg" class="img"></src></div>
+            <div><img src="darksouls.jpg" class="img"></src></div>
+        </div>
+        <div class="subcontent2">
+            <div><img src="night.jpg" class="img"></src></div>
+            <div><img src="blood.jpg" class="img"></src></div>
+        </div>
+         <div class="subcontent1">
+            <div><img src="lie.png" class="img"></src></div>
+            <div><img src="dk1.png" class="img"></src></div>
+        </div>
+        <div class="subcontent2">
+            <div><img src="demon.png" class="img"></src></div>
+            <div><img src="dk2.png" class="img"></src></div>
+        </div>
+        
+    </div>
+  </div>  
+  <div class="footer">todos os diteiros reservados.</div>
+</div>
+</body>
+</html>
